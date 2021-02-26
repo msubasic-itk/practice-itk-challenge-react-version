@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Grid from './Components/Grid/Grid';
+import List from './Components/List/List';
+import Map from './Components/Map/Map';
+import { Route, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <ul>
+          <li><Link to='/'>Grid</Link></li>
+          <li><Link to='list'>List</Link></li>
+          <li><Link to='map'>Map</Link></li>
+        </ul>
       </header>
+      <Route path='/' exact component={Grid} />
+      <Route path='/list' component={List} />
+      <Route path='/map' component={Map} />
     </div>
   );
 }
