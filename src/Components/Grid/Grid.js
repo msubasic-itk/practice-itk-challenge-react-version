@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from '../../axios-instance';
-
 import GridItem from './Grid-item';
+import './grid.scss';
 
 class grid extends Component {
     state = {
@@ -22,9 +22,11 @@ class grid extends Component {
         //                         <p>Fatching baby</p>;
 
         return (
-            <div>
+            <div className='container-component-grid'>
                 {this.state.offices ?
-                    this.state.offices.map(office => <GridItem key={office.id} officeData={office}/>) :
+                    <div className='container-div-grid'>
+                        {this.state.offices.map(office => <GridItem key={office.id} officeData={office}/>)} 
+                    </div>    :
                     <p>Fatching baby</p>
                 }
             </div>
