@@ -13,6 +13,7 @@
         grid-template-columns: repeat(auto-fit, scaleDimension(375));
         grid-template-rows: repeat(3, scaleDimension(375));
         gap: 25px;
+        justify-content: center;
         .office {
             //width: 100%;
             display: flex;
